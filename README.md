@@ -1,4 +1,4 @@
-# Taller práctico de disponibilidad y desempeño
+# Taller practico de disponibilidad y desempeño
 
 ### STATEMENT
 
@@ -128,7 +128,7 @@ It is t2.micro and finally we choose the keys to access the machine.
 
 ![Imágen 1](img/configuracion5.PNG)
 
-### 6. Despliegue la solución en un grupo de autoescalamiento
+### 6. Deploy the solution in an autoscaling group
 
 * Create the autoscaling group:
 
