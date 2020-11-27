@@ -131,10 +131,6 @@ It is t2.micro and finally we choose the keys to access the machine.
 
 ![Imágen 1](img/ejemplo.PNG)
 
-* Send requests and wait for a new instance to be created.
-
-![Imágen 1](img/solicitudes.PNG)
-
 * And as expected, a new instance of our machine is created by exceeding the CPU usage limit, which is 75%.
 
 ![Imágen 1](img/Ejemplo2.PNG)
