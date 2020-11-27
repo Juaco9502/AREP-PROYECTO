@@ -1,11 +1,3 @@
-# Taller practico de disponibilidad y desempeño
-
-### STATEMENT
-
-You have been hired to train a group of engineers in the implementation of high performance and elastic solutions. For this you must build a tutorial that allows them to build and demonstrate the auto-scaling capabilities of Amazon Web Services.
-
-Build a workshop that allows engineers to create a self-scaling solution in EC2 and in which they can demonstrate that the system effectively scales under given load conditions.
-
 ## PRE-REQUISITES
 
 * Java jdk > 7
@@ -22,33 +14,20 @@ Build a workshop that allows engineers to create a self-scaling solution in EC2 
 
 Copy the project through git clone in any direction to start working:
 ```
-git clone https://github.com/Juaco9502/Taller-practico-de-Disponibilidad-y-Desempeno---AREP.git
+git clone https://github.com/Juaco9502/AREP-PROYECTO.git
 ```
 
 ## STEPS
 
-### 1. This is an interesting problem that needs a distributed solution and requires high processing consumption, for example string ordering, indexing large amounts of text, etc. Generate the minimum requirements.
-### 2. Build a prototype of the solution.
-
-The chosen problem is the ordering of strings, there is a web service which is in charge of ordering the strings that are entered.
-
-The problem with this service is that when there are many requests, you cannot respond to all of them. This for lack of processing. For this reason, it is required that when the requests exceed the capacity of the server, a new instance is created to support these requests.
-
-The solution prototype was built using spark. As can be seen in the image, there is an interface where the user can enter the list of strings to be ordered alphabetically.
-
-![alt text](https://github.com/diego2097/arep-Disponibilidad/blob/master/img/index.PNG "index")
-
-![alt text](https://github.com/diego2097/arep-Disponibilidad/blob/master/img/order.PNG "ordenadas")
-
-### 3. Deploy the solution on AWS on EC2.
+### 1. Deploy the solution on AWS on EC2.
 
 This is the deployment process on an EC2 machine:
 
-![alt text](https://github.com/diego2097/arep-Disponibilidad/blob/master/img/EC2.PNG "ec2")
+![EC2](img/EC2.PNG)
 
-![alt text](https://github.com/diego2097/arep-Disponibilidad/blob/master/img/servicio.PNG "servicio")
+![Servicio](img/servicio.PNG)
 
-### 4. Configure the machine to start services after the server restarts.
+### 2. Configure the machine to start services after the server restarts.
 
 
 To configure the service to start with the machine, use "systemd" which is a tool developed by Red Hat that allows
@@ -56,18 +35,18 @@ start and stop machine services.
 
 * The service must first be created:
 
-![alt text](https://github.com/diego2097/arep-Disponibilidad/blob/master/img/myservice.PNG "myservice")
+![myservice](img/myservice.PNG)
 
 
 **The ExecStart variable indicates the process to run, you can use a .sh script or simply indicate the command to execute.**
 
 * After this you must copy this file to the address **/ etc / systemd / system /** and grant it execution permissions.
 
-![alt text](https://github.com/diego2097/arep-Disponibilidad/blob/master/img/startservice.PNG "start")
+![startservice](img/startservice.PNG)
 
 **We can notice that the state of the program is running in the background.**
 
-### 4. Configure the machine to start services after the server restarts.
+### 3. Configure the machine to start services after the server restarts.
 
 * If we want it to be executed every time the machine starts, we simply have to execute the following command:
 
@@ -77,14 +56,14 @@ sudo systemctl enable myservice
 
 * When executing the command, the following happens:
 
-![alt text](https://github.com/diego2097/arep-Disponibilidad/blob/master/img/enable.PNG "enable")
+![enable](img/enable.PNG)
 
 * Now we restart the machine and we can see that the status of the service should be "running"
 
-![alt text](https://github.com/diego2097/arep-Disponibilidad/blob/master/img/running.PNG "running")
+![running](img/running.PNG)
 
 
-### 5. Create an AMI from this machine.
+### 4. Create an AMI from this machine.
 
 * Create an image of our machine:
 
@@ -168,7 +147,7 @@ It is t2.micro and finally we choose the keys to access the machine.
 
 ## AUTHOR
 
-**JUAN CAMILO ORTIZ MEDINA** - [Juaco9502](https://github.com/juaco9502)
+**Juan Camilo Ortiz - Juan Sebastian Diaz** - [Juaco9502](https://github.com/juaco9502) - [Juandiaz960](https://github.com/juandiaz960)
 
 
 ## LICENSE
