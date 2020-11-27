@@ -25,8 +25,6 @@ This is the deployment process on an EC2 machine:
 
 ![EC2](img/EC2.PNG)
 
-![Servicio](img/servicio.PNG)
-
 ### 2. Configure the machine to start services after the server restarts.
 
 
